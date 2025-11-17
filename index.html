@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control + Save - Assistência Técnica em Informática</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-green': '#009C4A',
+                        'brand-green-dark': '#006B34',
+                        'brand-gray': '#F4F4F4',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Adiciona scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Define a fonte padrão */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Animação de pulso para o botão do WhatsApp */
+        @keyframes pulse-green {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 156, 74, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 14px rgba(0, 156, 74, 0);
+            }
+        }
+
+        .animate-pulse-green {
+            animation: pulse-green 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <header class="sticky top-0 z-50 w-full bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <a href="#inicio" class="flex items-center">
+                <img src="./img/logo.png" alt="Logo Control + Save" class="h-12 w-auto"> 
+            </a>
+
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#inicio" class="text-gray-600 hover:text-brand-green transition-colors">Início</a>
+                <a href="#servicos" class="text-gray-600 hover:text-brand-green transition-colors">Serviços</a>
+                <a href="#contato" class="text-gray-600 hover:text-brand-green transition-colors">Contato</a>
+                <a href="https://wa.me/5519971151207" target="_blank"
+                   class="bg-brand-green text-white px-5 py-2 rounded-lg shadow-md hover:bg-opacity-90 hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                    Solicitar Suporte
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button class="text-gray-700">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio" class="pt-20 pb-16 md:pt-32 md:pb-24">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                        Assistência Técnica Especializada em Informática
+                    </h1>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Soluções rápidas, seguras e profissionais para o seu computador.
+                    </p>
+                    
+                    <a href="https://wa.me/5519971151207" target="_blank"
+                       class="mt-8 inline-flex items-center space-x-3 bg-brand-green text-white font-semibold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 animate-pulse-green">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                        <span>Chamar no WhatsApp</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center justify-center">
+                    <img src="./img/2.png" alt="Ilustração de Assistência Técnica de Computadores" 
+                         class="w-full max-w-sm rounded-lg object-contain">
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="bg-brand-gray py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8">
+                    Nossos Serviços
+                </h2>
+                
+                <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-6 mb-16">
+                    <div class="flex items-center space-x-4 p-5 bg-white rounded-xl shadow-md">
+                        <i data-lucide="truck" class="w-10 h-10 text-brand-green flex-shrink-0"></i>
+                        <div>
+                            <h4 class="font-semibold text-lg text-gray-800">Sistema Leva e Busca</h4>
+                            <p class="text-sm text-gray-600">Coletamos e entregamos seu equipamento com segurança.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4 p-5 bg-white rounded-xl shadow-md">
+                        <i data-lucide="clock" class="w-10 h-10 text-brand-green flex-shrink-0"></i>
+                        <div>
+                            <h4 class="font-semibold text-lg text-gray-800">Horários Flexíveis</h4>
+                            <p class="text-sm text-gray-600">Atendemos em horários especiais para sua conveniência.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <div class="flex justify-center mb-4">
+                            <i data-lucide="hard-drive" class="w-16 h-16 text-brand-green"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Formatação</h3>
+                        <p class="text-gray-600 text-center text-sm">Instalação e otimização de sistemas operacionais (Windows, macOS, Linux).</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <div class="flex justify-center mb-4">
+                            <i data-lucide="wind" class="w-16 h-16 text-brand-green"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Limpeza</h3>
+                        <p class="text-gray-600 text-center text-sm">Limpeza física completa de desktops e notebooks para prevenir superaquecimento.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <div class="flex justify-center mb-4">
+                            <i data-lucide="wrench" class="w-16 h-16 text-brand-green"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Manutenção de Hardware</h3>
+                        <p class="text-gray-600 text-center text-sm">Diagnóstico e troca de peças como HD/SSD, memória RAM, placas e fontes.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <div class="flex justify-center mb-4">
+                            <i data-lucide="mouse-pointer-click" class="w-16 h-16 text-brand-green"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Suporte Remoto</h3>
+                        <p class="text-gray-600 text-center text-sm">Solução de problemas de software e configurações à distância, com agilidade.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <div class="flex justify-center mb-4">
+                            <i data-lucide="cpu" class="w-16 h-16 text-brand-green"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Montagem de PCs</h3>
+                        <p class="text-gray-600 text-center text-sm">Montagem de computadores personalizados (gamer, trabalho ou uso diário).</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <div class="flex justify-center mb-4">
+                            <i data-lucide="shield-alert" class="w-16 h-16 text-brand-green"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Remoção de Vírus</h3>
+                        <p class="text-gray-600 text-center text-sm">Verificação completa do sistema, remoção de malware e instalação de antivírus.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="bg-white py-16 md:py-24">
+            <div class="container mx-auto px-6 max-w-3xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    Sobre Nós
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    A Control + Save é especializada em soluções rápidas e eficientes para computadores e notebooks. Nosso compromisso é garantir o melhor desempenho e segurança para o seu equipamento.
+                </p>
+            </div>
+        </section>
+
+        <section id="contato" class="bg-brand-gray py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+                    Fale Conosco
+                </h2>
+                <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    
+                    <div class="flex flex-col justify-center">
+                        <h3 class="text-2xl font-semibold mb-6">Informações de Contato</h3>
+                        <p class="text-gray-600 mb-6">Entre em contato conosco por WhatsApp, Instagram ou preencha o formulário ao lado.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="phone" class="w-6 h-6 text-brand-green"></i>
+                                <a href="https://wa.me/5519971151207" target="_blank" class="text-lg text-gray-700 hover:text-brand-green">(19) 97115-1207</a>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="instagram" class="w-6 h-6 text-brand-green"></i>
+                                <a href="https://www.instagram.com/controls.assistencia/" target="_blank" class="text-lg text-gray-700 hover:text-brand-green">@controls.assistencia</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <form action="#" method="POST" class="bg-white p-8 rounded-xl shadow-lg space-y-6">
+                        <div>
+                            <label for="nome" class="block text-sm font-medium text-gray-700">Nome</label>
+                            <input type="text" id="nome" name="nome" required
+                                   class="mt-1 block w-full p-3 rounded-lg border border-gray-300 focus:ring-brand-green focus:border-brand-green shadow-sm">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
+                            <input type="email" id="email" name="email" required
+                                   class="mt-1 block w-full p-3 rounded-lg border border-gray-300 focus:ring-brand-green focus:border-brand-green shadow-sm">
+                        </div>
+                        <div>
+                            <label for="mensagem" class="block text-sm font-medium text-gray-700">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" required
+                                      class="mt-1 block w-full p-3 rounded-lg border border-gray-300 focus:ring-brand-green focus:border-brand-green shadow-sm"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit"
+                                    class="w-full bg-brand-green text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 hover:shadow-lg transition-all">
+                                Enviar Mensagem
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-brand-green-dark text-gray-200 py-8">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="text-sm">
+                © 2025 Control + Save Assistência Técnica - Todos os direitos reservados.
+            </div>
+            
+            <div class="mt-4 md:mt-0">
+                <a href="https://www.instagram.com/controls.assistencia/" target="_blank" class="text-gray-200 hover:text-white transition-colors">
+                    <i data-lucide="instagram" class="w-6 h-6"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
